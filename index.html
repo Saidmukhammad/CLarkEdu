@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+   <link rel="stylesheet" href="assets/css/style.css">
+   <!-- <link rel="stylesheet" href="assets/css/coub.css"> -->
+   <link rel="stylesheet" href="assets/css/gallery.css">
+   <title>ClarkEdu</title>
+</head>
+
+<body class="font-sans antialiased" style="font-family: roboto;">
+   <header class="header h-screen relative flex items-center justify-center text-cener overflow-hidden">
+      <video src="assets/video/header-vid.mp4" autoplay loop muted playsinline
+         class="z-10 w-auto min-w-full min-h-full max-w-none abolute"></video>
+      <div class="absolute h-screen w-screen z-20  header-bg"></div>
+      <div class="header__content absolute h-screen w-screen z-30 flex flex-col items-center justify-center gap-y-4 px-4">
+         <h1 class="text-center text-white text-[clamp(2.25rem,1.6579rem+2.9605vw,4.5rem)] leading-[clamp(2.25rem,1.6579rem+2.9605vw,4.5rem)] font-bold">
+            Открой свой потенциал с <b>Clark Education</b>
+         </h1>
+         <p class="text-center text-white text-base md:text-lg lg:text-xl xl:text-2xl">Clark Education: Ваш путь к
+            успеху в языках, IT и робототехнике для детей и
+            подростков.</p>
+         <a href="#!" class="text-white px-4 py-2">
+            <button class="btn-86">
+               <div class="fallback ">Узнать больше</div>
+               <div class="letters" aria-hidden>
+                  <span>У</span>
+                  <span>З</span>
+                  <span>Н</span>
+                  <span>А</span>
+                  <span>Т</span>
+                  <span>Ь</span>
+                  <span>&nbsp;</span>
+                  <span>Б</span>
+                  <span>О</span>
+                  <span>Л</span>
+                  <span>Ь</span>
+                  <span>Ш</span>
+                  <span>Е</span>
+               </div>
+            </button>
+         </a>
+         <!-- Узнать больше -->
+      </div>
+   </header>
+   <nav class="header__nav z-99999 fixed top-0 left-0 w-screen p-5 shadow-md bg-black/70">
+      <div class="container mx-auto flex justify-between items-center">
+         <a href="#!">
+            <img class="h-[70px]" src="assets/img/logoBlackWhite.png" alt="">
+         </a>
+         <div class="header__nav-links gap-x-5 xl:flex hidden">
+            <a href="#!">
+               <button class="btn-86">
+                  <div class="fallback">О нас</div>
+                  <div class="letters" aria-hidden>
+                     <span>О</span>
+                     <span>&nbsp;</span>
+                     <span>Н</span>
+                     <span>А</span>
+                     <span>С</span>
+                  </div>
+               </button>
+            </a>
+            <a href="#!">
+               <button class="btn-86">
+                  <div class="fallback">Курсы</div>
+                  <div class="letters" aria-hidden>
+                     <span>К</span>
+                     <span>У</span>
+                     <span>Р</span>
+                     <span>С</span>
+                     <span>Ы</span>
+                  </div>
+               </button>
+            </a>
+            <a href="#!">
+               <button class="btn-86">
+                  <div class="fallback">Расписание</div>
+                  <div class="letters" aria-hidden>
+                     <span>Р</span>
+                     <span>А</span>
+                     <span>С</span>
+                     <span>П</span>
+                     <span>И</span>
+                     <span>С</span>
+                     <span>А</span>
+                     <span>Н</span>
+                     <span>И</span>
+                     <span>Е</span>
+                  </div>
+               </button>
+            </a>
+            <a href="#!">
+               <button class="btn-86">
+                  <div class="fallback">Преподаватели</div>
+                  <div class="letters" aria-hidden>
+                     <span>П</span>
+                     <span>Р</span>
+                     <span>Е</span>
+                     <span>П</span>
+                     <span>О</span>
+                     <span>Д</span>
+                     <span>А</span>
+                     <span>В</span>
+                     <span>А</span>
+                     <span>Т</span>
+                     <span>Е</span>
+                     <span>Л</span>
+                     <span>И</span>
+                  </div>
+               </button>
+            </a>
+            <a href="#!">
+               <button class="btn-86">
+                  <div class="fallback">Контакты</div>
+                  <div class="letters" aria-hidden>
+                     <span>К</span>
+                     <span>О</span>
+                     <span>Н</span>
+                     <span>Т</span>
+                     <span>А</span>
+                     <span>К</span>
+                     <span>Т</span>
+                     <span>Ы</span>
+                  </div>
+               </button>
+            </a>
+            <a href="#!">
+               <button class="btn-86">
+                  <div class="fallback">Отзывы</div>
+                  <div class="letters" aria-hidden>
+                     <span>О</span>
+                     <span>Т</span>
+                     <span>З</span>
+                     <span>Ы</span>
+                     <span>В</span>
+                     <span>Ы</span>
+                  </div>
+               </button>
+            </a>
+            <a href="#!">
+               <button class="btn-86">
+                  <div class="fallback">Новости/Блог</div>
+                  <div class="letters" aria-hidden>
+                     <span>Н</span>
+                     <span>О</span>
+                     <span>В</span>
+                     <span>О</span>
+                     <span>С</span>
+                     <span>Т</span>
+                     <span>И</span>
+                     <span>/</span>
+                     <span>Б</span>
+                     <span>Л</span>
+                     <span>О</span>
+                     <span>Г</span>
+                  </div>
+               </button>
+            </a>
+         </div>
+         <div class="header__burger xl:hidden">
+            <div class="header__burger-item"></div>
+            <div class="header__burger-item"></div>
+            <div class="header__burger-item"></div>
+         </div>
+         <!-- <ul class="flex gap-x-5 text-[18px] uppercase text-white weight-medium">
+            <li class="header__nav-link"><a href="#!">О нас</a></li>
+            <li class="header__nav-link"><a href="#!">Курсы</a></li>
+            <li class="header__nav-link"><a href="#!">Расписание</a></li>
+            <li class="header__nav-link"><a href="#!">Преподаватели</a></li>
+            <li class="header__nav-link"><a href="#!">Контакты</a></li>
+            <li class="header__nav-link"><a href="#!">Отзывы</a></li>
+            <li class="header__nav-link"><a href="#!">Новости/Блог</a></li>
+         </ul> -->
+      </div>
+   </nav>
+   <main class="main">
+      <div class="about bg-black relative">
+         <div class="container mx-auto text-white flex items-center justify-between py-[45px] px-[30px]">
+            <div class="element-line"></div>
+            <div class="about-left max-w-[45%] flex flex-col gap-y-5">
+               <h2
+                  class="text-[clamp(1.5625rem,1.1678rem+1.9737vw,3.0625rem)] font-bold about-title">
+                  Раскрываем потенциал: <br>наш подход к обучению
+               </h2>
+               <p class="text-[clamp(1rem,0.9043rem+0.4252vw,1.3125rem)] leading-7">
+                  В Clark Education мы убеждены, что каждый ребенок обладает уникальным потенциалом, который необходимо
+                  раскрыть. С того момента, как вы приходите к нам, вы заметите разницу. Мы стремимся создать не просто
+                  учебный центр, а вдохновляющее и поддерживающее сообщество, где дети и подростки могут осваивать новые
+                  знания и навыки в области языков, IT и робототехники. Наша команда высококвалифицированных и преданных
+                  своему делу преподавателей, администраторов и специалистов по поддержке обеспечивает, чтобы каждый
+                  учащийся чувствовал себя на 100% принятым и мог полностью погрузиться в увлекательный процесс обучения
+               </p>
+               <p class="text-[clamp(1rem,0.9043rem+0.4252vw,1.3125rem)] leading-7">
+                  Clark Education: Ваш путь к инновациям и успеху.
+               </p>
+            </div>
+            <div class="about-right max-w-[45%]">
+               <img src="assets/img/aboutRight.jpg" alt="" class="max-h-[530px]">
+            </div>
+         </div>
+      </div>
+      <section class="gallery-section flex flex-col items-center justify-center min-h-screen py-8">
+         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-black mb-8">Наши Преподаватели и Курсы</h2>
+         </div>
+
+         <div class="gallery-container w-full max-w-full">
+            <ul id="teachers-list">
+            </ul>
+         </div>
+      </section>
+      <div id="schedule-modal" class="modal-overlay">
+         <div class="modal-content">
+            <button id="modal-close-btn" class="modal-close-btn">&times;</button>
+            <h4 class="modal-title">Расписание преподавателя</h4>
+            <p id="modal-schedule-content" class="modal-schedule-text"></p>
+         </div>
+      </div>
+
+      <footer class="h-25 bg-black mt-[200px]">
+
+      </footer>
+   </main>
+   <script src="assets/js/gallery.js"></script>
+</body>
+
+</html>

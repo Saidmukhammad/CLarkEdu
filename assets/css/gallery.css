@@ -1,0 +1,308 @@
+/* Общие стили для галереи */
+body {
+   font-family: "Roboto Condensed", sans-serif;
+   color: #fff;
+   line-height: 24px;
+   font-size: 16px;
+}
+
+.bio {
+   display: grid;
+   grid-auto-flow: row;
+   grid-template-rows: min-content;
+   grid-gap: 24px;
+}
+
+ul {
+   display: flex;
+   min-height: 750px;
+   /* Минимальная высота для вертикального макета */
+   height: 100vh;
+   /* Занимает всю высоту видимой области */
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   /* Важно для плавных переходов */
+   list-style-type: none;
+   width: 100%;
+   min-width: 100%;
+   flex-direction: column;
+   /* По умолчанию колонки для мобильных */
+}
+
+@media only screen and (min-width: 1280px) {
+   ul {
+      flex-direction: row;
+      /* На широких экранах - горизонтально */
+   }
+}
+
+li {
+   flex: 1;
+   /* Все элементы занимают равное пространство */
+   display: flex;
+   align-items: stretch;
+   cursor: pointer;
+   transition: all 0.35s ease;
+   /* Плавный переход для flex и других свойств */
+   position: relative;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   /* Изменено на center center для лучшего отображения */
+   overflow: hidden;
+}
+
+li:before {
+   content: "";
+   position: absolute;
+   z-index: 20;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(15, 15, 15, 0.75);
+   /* Затемнение по умолчанию */
+}
+
+li.active {
+   flex: 6;
+   /* Активный элемент занимает больше места */
+   cursor: default;
+}
+
+li.active:before {
+   background: linear-gradient(180deg, rgba(15, 15, 15, 0) 0%, #111111 100%);
+   /* Градиент для активного элемента */
+}
+
+h2 {
+   font-size: 36px;
+   line-height: 36px;
+   font-weight: 700;
+   text-transform: uppercase;
+}
+
+@media only screen and (min-width: 768px) {
+   h2 {
+      font-size: 48px;
+      line-height: 48px;
+   }
+}
+
+@media only screen and (min-width: 1280px) {
+   h2 {
+      font-size: 64px;
+      line-height: 64px;
+   }
+}
+
+h3 {
+   font-weight: bold;
+   white-space: nowrap;
+   position: absolute;
+   z-index: 30;
+   opacity: 1;
+   top: 50%;
+   left: 50%;
+   transition: top 0.35s, opacity 0.15s;
+   transform-origin: 0 0;
+   font-size: 24px;
+   text-transform: uppercase;
+   transform: translate(-50%, -50%) rotate(0deg);
+   /* По умолчанию без поворота */
+}
+
+@media only screen and (min-width: 1280px) {
+   h3 {
+      top: 100%;
+      left: 50%;
+      font-size: 32px;
+      transform: translate(-20px, -50%) rotate(-90deg);
+      /* Поворот для десктопов */
+   }
+}
+
+/* Стили для h3 внутри активного li */
+li.active h3 {
+   opacity: 0;
+   top: 200%;
+   /* Уходит вниз */
+}
+
+.section-content {
+   position: relative;
+   z-index: 30;
+   opacity: 0;
+   /* Скрыто по умолчанию */
+   align-self: flex-end;
+   width: 100%;
+   transition: all 0.35s 0.1s ease-out;
+}
+
+/* Стили для section-content внутри активного li */
+li.active .section-content {
+   opacity: 1;
+   /* Появляется */
+}
+
+.section-content .inner {
+   position: absolute;
+   display: grid;
+   grid-auto-flow: row;
+   grid-template-columns: 1fr;
+   grid-column-gap: 20px;
+   align-items: flex-end;
+   left: 0;
+   bottom: 0;
+   padding: 20px;
+   opacity: 0;
+   /* Скрыто по умолчанию */
+   transition: opacity 0.25s ease-out;
+}
+
+@media only screen and (min-width: 768px) {
+   .section-content .inner {
+      grid-auto-flow: column;
+      grid-template-columns: calc(100% - 340px) 300px;
+      grid-column-gap: 40px;
+      padding: 40px;
+   }
+}
+
+@media only screen and (min-width: 1280px) {
+   .section-content .inner {
+      grid-auto-flow: column;
+      grid-template-columns: 460px 200px;
+      grid-column-gap: 40px;
+      padding: 40px;
+   }
+}
+
+/* Стили для inner внутри активного section-content */
+li.active .section-content .inner {
+   opacity: 1;
+   /* Появляется */
+}
+
+.artist-profile-link {
+   pointer-events: none;
+   /* Ссылка неактивна, пока элемент неактивен */
+}
+
+li.active .artist-profile-link {
+   pointer-events: all;
+   /* Ссылка активна, когда элемент активен */
+}
+
+/* Стили для модального окна расписания */
+/* Стили для модального окна расписания */
+.modal-overlay {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.9); /* Более темный фон */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 1000;
+   opacity: 0;
+   visibility: hidden;
+   transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.is-visible {
+   opacity: 1;
+   visibility: visible;
+}
+
+.modal-content {
+   background-color: #000; /* Черный фон */
+   padding: 30px;
+   border-radius: 8px;
+   max-width: 600px; /* Увеличим ширину для таблицы */
+   width: 90%;
+   position: relative;
+   color: #fff; /* Белый текст */
+   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1); /* Легкая белая тень */
+   transform: translateY(-20px);
+   transition: transform 0.3s ease;
+   border: 1px solid #333; /* Небольшая рамка для контраста */
+}
+
+.modal-overlay.is-visible .modal-content {
+   transform: translateY(0);
+}
+
+.modal-close-btn {
+   position: absolute;
+   top: 10px;
+   right: 15px;
+   background: none;
+   border: none;
+   font-size: 28px; /* Немного крупнее */
+   color: #fff; /* Белый крестик */
+   cursor: pointer;
+   line-height: 1;
+   transition: color 0.2s ease;
+}
+
+.modal-close-btn:hover {
+   color: #bbb; /* Легкое изменение цвета при наведении */
+}
+
+.modal-title {
+   font-size: 28px;
+   font-weight: bold;
+   margin-bottom: 25px; /* Увеличим отступ */
+   text-align: center;
+   color: #fff; /* Белый заголовок */
+}
+
+/* Стили для таблицы расписания */
+.schedule-table {
+   width: 100%;
+   border-collapse: collapse; /* Убираем двойные границы */
+   margin-top: 20px;
+   color: #fff; /* Белый текст таблицы */
+}
+
+.schedule-table th,
+.schedule-table td {
+   border: 1px solid #333; /* Тонкие серые границы */
+   padding: 12px; /* Увеличим отступы */
+   text-align: left;
+   font-size: 16px;
+}
+
+.schedule-table th {
+   background-color: #111; /* Темно-серый фон для заголовков */
+   font-weight: bold;
+   color: #eee; /* Светло-серый текст заголовков */
+   text-transform: uppercase;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+   background-color: #080808; /* Немного светлее фон для четных строк */
+}
+
+.schedule-table tbody tr:hover {
+   background-color: #222; /* Фон при наведении */
+}
+
+.schedule-group {
+   font-size: 14px; /* Меньший размер для группы */
+   color: #aaa; /* Серый цвет для группы */
+   display: block; /* С новой строки */
+   margin-top: 4px; /* Отступ сверху */
+}
+
+/* Дополнительные стили для кнопки "Узнать расписание" */
+.view-schedule-btn {
+   margin-top: 10px;
+   display: block;
+   width: 100%;
+   text-align: center;
+}
