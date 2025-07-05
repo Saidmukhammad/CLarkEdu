@@ -5,9 +5,9 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+   <link rel="stylesheet" href="assets/css/gallery.css">
    <link rel="stylesheet" href="assets/css/style.css">
    <!-- <link rel="stylesheet" href="assets/css/coub.css"> -->
-   <link rel="stylesheet" href="assets/css/gallery.css">
    <title>ClarkEdu</title>
 </head>
 
@@ -16,8 +16,10 @@
       <video src="assets/video/header-vid.mp4" autoplay loop muted playsinline
          class="z-10 w-auto min-w-full min-h-full max-w-none abolute"></video>
       <div class="absolute h-screen w-screen z-20  header-bg"></div>
-      <div class="header__content absolute h-screen w-screen z-30 flex flex-col items-center justify-center gap-y-4 px-4">
-         <h1 class="text-center text-white text-[clamp(2.25rem,1.6579rem+2.9605vw,4.5rem)] leading-[clamp(2.25rem,1.6579rem+2.9605vw,4.5rem)] font-bold">
+      <div
+         class="header__content absolute h-screen w-screen z-30 flex flex-col items-center justify-center gap-y-4 px-4">
+         <h1
+            class="text-center text-white text-[clamp(2.25rem,1.6579rem+2.9605vw,4.5rem)] leading-[clamp(2.25rem,1.6579rem+2.9605vw,4.5rem)] font-bold">
             Открой свой потенциал с <b>Clark Education</b>
          </h1>
          <p class="text-center text-white text-base md:text-lg lg:text-xl xl:text-2xl">Clark Education: Ваш путь к
@@ -46,7 +48,8 @@
          <!-- Узнать больше -->
       </div>
    </header>
-   <nav class="header__nav z-99999 fixed top-0 left-0 w-screen p-5 shadow-md bg-black/70">
+   <nav
+      class="header__nav z-999 fixed top-5 left-1/2 -translate-x-1/2 w-[98vw] xl:w-full xl:rounded-none xl:top-0 p-5 shadow-xl bg-black/70 rounded-4xl">
       <div class="container mx-auto flex justify-between items-center">
          <a href="#!">
             <img class="h-[70px]" src="assets/img/logoBlackWhite.png" alt="">
@@ -179,33 +182,29 @@
    </nav>
    <main class="main">
       <div class="about bg-black relative">
-         <div class="container mx-auto text-white flex items-center justify-between py-[45px] px-[30px]">
-            <div class="element-line"></div>
-            <div class="about-left max-w-[45%] flex flex-col gap-y-5">
-               <h2
-                  class="text-[clamp(1.5625rem,1.1678rem+1.9737vw,3.0625rem)] font-bold about-title">
+         <div class="container mx-auto text-white lg:flex lg:items-center lg:justify-between py-[45px] px-[15px]">
+            <div class="element-line hidden lg:block"></div>
+            <div class="about-left w-full lg:max-w-[45%] flex flex-col gap-y-5">
+               <h2 class="font-bold about-title">
                   Раскрываем потенциал: <br>наш подход к обучению
                </h2>
                <p class="text-[clamp(1rem,0.9043rem+0.4252vw,1.3125rem)] leading-7">
-                  В Clark Education мы убеждены, что каждый ребенок обладает уникальным потенциалом, который необходимо
-                  раскрыть. С того момента, как вы приходите к нам, вы заметите разницу. Мы стремимся создать не просто
-                  учебный центр, а вдохновляющее и поддерживающее сообщество, где дети и подростки могут осваивать новые
-                  знания и навыки в области языков, IT и робототехники. Наша команда высококвалифицированных и преданных
-                  своему делу преподавателей, администраторов и специалистов по поддержке обеспечивает, чтобы каждый
-                  учащийся чувствовал себя на 100% принятым и мог полностью погрузиться в увлекательный процесс обучения
+                  В Clark Education мы раскрываем уникальный потенциал каждого ребенка. Мы создаем вдохновляющее
+                  сообщество, где дети и подростки осваивают языки, IT и робототехнику. Наша команда
+                  высококвалифицированных специалистов обеспечивает полное погружение в увлекательный процесс обучения.
                </p>
                <p class="text-[clamp(1rem,0.9043rem+0.4252vw,1.3125rem)] leading-7">
                   Clark Education: Ваш путь к инновациям и успеху.
                </p>
             </div>
-            <div class="about-right max-w-[45%]">
-               <img src="assets/img/aboutRight.jpg" alt="" class="max-h-[530px]">
+            <div class="about-right mt-5 lg:mt-0 lg:max-w-[45%]">
+               <img src="assets/img/aboutRight.jpg" alt="" class="w-full object-cover max-h-[500px]">
             </div>
          </div>
       </div>
       <section class="gallery-section flex flex-col items-center justify-center min-h-screen py-8">
          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-black mb-8">Наши Преподаватели и Курсы</h2>
+            <h2 class="text-3xl font-bold text-center text-black mb-8 added-h2">Наши Преподаватели и Курсы</h2>
          </div>
 
          <div class="gallery-container w-full max-w-full">
@@ -221,10 +220,40 @@
          </div>
       </div>
 
-      <footer class="h-25 bg-black mt-[200px]">
+      <footer class=" bg-black mt-[200px] py-20">
+         <div class="container px-4 mx-auto">
+            <div class="footer__info flex justify-between flex-wrap items-center">
+               <div class="footer__info-socials flex flex-col items-start">
+                  <img src="assets/img/logoBlackWhite.png" alt="" class="h-[70px]">
+                  <div class="footer__socials-icons flex gap-4 mt-5">
+                     <a href="" class="footer__social"><i class="fa-brands fa-telegram"></i></a>
+                     <a href="" class="footer__social"><i class="fa-brands fa-instagram"></i></a>
+                     <a href="" class="footer__social"><i class="fa-brands fa-facebook"></i></a>
+                     <a href="" class="footer__social"><i class="fa-brands fa-youtube"></i></a>
+                     <a href="" class="footer__social"></a>
+                  </div>
+               </div>
+               <div class="footer__info-links flex flex-col text-[18px]">
+                  <a href="" class="footer__link">О нас</a>
+                  <a href="" class="footer__link">Курсы</a>
+                  <a href="" class="footer__link">Расписание</a>
+                  <a href="" class="footer__link">Преподаватели</a>
+                  <a href="" class="footer__link">Контакты</a>
+                  <a href="" class="footer__link">Отзывы</a>
+                  <a href="" class="footer__link">Новости и Блог</a>
+               </div>
+               <div class="footer__help flex flex-col md:text-end">
+                  <h4 class="footer-text text-[25px] ">Для связи:</h4>
+                  <a href="tel:+998901234567" class="text-[25px] mt-5">+998 (90) 123-45-67</a>
+                  <a href="#!" class="mt-[30px] text-[20px]">Площадь Мустакиллик <br> Ташкент, Tashkent
+                  </a>
+               </div>
+            </div>
+         </div>
 
       </footer>
    </main>
+   <script src="https://kit.fontawesome.com/26112c0799.js" crossorigin="anonymous"></script>
    <script src="assets/js/gallery.js"></script>
 </body>
 
